@@ -14,7 +14,9 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+import Box from "@material-ui/core/Box";
 import { CustomThemeContext } from "./themes/CustomThemeProvider";
+import PopoverPopupState from "./components/PopoverPopupState";
 
 const drawerWidth = 240;
 
@@ -62,13 +64,18 @@ export default function App() {
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Material UI Theme Switcher
-          </Typography>
-          <FormControlLabel
-            control={<SwitchUI checked={isDark} onChange={handleThemeChange} />}
-            label="Theme"
-          />
+          <Box m={1} pt={1}>
+            <Typography variant="h6" className={classes.title}>
+              Material UI Theme Switcher
+            </Typography>
+            <PopoverPopupState />
+            <FormControlLabel
+              control={
+                <SwitchUI checked={isDark} onChange={handleThemeChange} />
+              }
+              label="Theme"
+            />
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer
