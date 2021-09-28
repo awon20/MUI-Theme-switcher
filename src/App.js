@@ -17,6 +17,7 @@ import MailIcon from "@material-ui/icons/Mail";
 import Box from "@material-ui/core/Box";
 import { CustomThemeContext } from "./themes/CustomThemeProvider";
 import PopoverPopupState from "./components/PopoverPopupState";
+import CustomizedDialogs from "./components/CustomizedDialogs";
 
 const drawerWidth = 240;
 
@@ -68,6 +69,7 @@ export default function App() {
             <Typography variant="h6" className={classes.title}>
               Material UI Theme Switcher
             </Typography>
+            <CustomizedDialogs />
             <PopoverPopupState />
             <FormControlLabel
               control={
