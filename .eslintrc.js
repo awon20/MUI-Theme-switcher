@@ -14,24 +14,26 @@ module.exports = {
   //   },
   // },
   extends: [
-    //'plugin:prettier/recommended', 
-    'react-app',
-    'airbnb'
+    //'plugin:prettier/recommended',
+    "react-app",
+    "airbnb",
   ],
   plugins: [
-    // 'react', 
-    // 'jsx-a11y', 
-    // 'import', 
+    // 'react',
+    // 'jsx-a11y',
+    // 'import',
     // 'prettier'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-unused-vars': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-unused-vars": process.env.NODE_ENV === "production" ? "error" : "warn",
+    "linebreak-style": ["error", "windows"], // changes the file to CRLF
+
     // indent: ['warn', 2, { ignoredNodes: ['TemplateLiteral'] }],
     // 'template-curly-spacing': 'off',
     // quotes: ['warn', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
-    semi: ['warn', 'never'],
+    semi: ["warn", "never"],
     // 'comma-style': ['warn', 'last'],
     // 'comma-spacing': ['warn', { before: false, after: true }],
     // 'object-curly-spacing': ['warn', 'always'],
@@ -51,7 +53,7 @@ module.exports = {
     //     functions: 'never',
     //   },
     // ],
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
     // 'prettier/prettier': [
     //   'error',
     //   {
@@ -63,4 +65,4 @@ module.exports = {
     //   },
     // ],
   },
-}
+};
