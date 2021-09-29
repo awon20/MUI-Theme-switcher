@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider, StyledEngineProvider } from "@material-ui/core/styles";
 import getTheme from "./base";
 
 // eslint-disable-next-line no-unused-vars
@@ -34,7 +34,9 @@ const CustomThemeProvider = (props) => {
 
   return (
     <CustomThemeContext.Provider value={contextValue}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      </StyledEngineProvider>
     </CustomThemeContext.Provider>
   );
 };

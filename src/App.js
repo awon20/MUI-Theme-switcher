@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import makeStyles from '@material-ui/styles/makeStyles';
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 // import CssBaseline from "@material-ui/core/CssBaseline";
