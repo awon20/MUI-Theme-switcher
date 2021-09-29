@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import makeStyles from '@material-ui/styles/makeStyles';
+import makeStyles from "@material-ui/styles/makeStyles";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 // import CssBaseline from "@material-ui/core/CssBaseline";
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   appBar: {
-    zIndex: theme.zIndex.drawer + 1,
+    zIndex: drawerWidth,
   },
   title: {
     flexGrow: 1,
@@ -43,7 +43,11 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    paddingTop: "30px",
+    paddingBottom: "30px",
+    paddingLeft: "30px",
+    paddingRight: "30px",
+    // padding: theme.spacing(3),
   },
 }));
 
