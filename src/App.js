@@ -18,6 +18,7 @@ import Box from "@material-ui/core/Box";
 import { CustomThemeContext } from "./themes/CustomThemeProvider";
 import PopoverPopupState from "./components/PopoverPopupState";
 import CustomizedDialogs from "./components/CustomizedDialogs";
+import ToogleButtons from "./components/ToogleButton";
 
 const drawerWidth = 240;
 
@@ -73,8 +74,6 @@ export default function App() {
             <Typography variant="h6" className={classes.title}>
               Material UI Theme Switcher
             </Typography>
-            <CustomizedDialogs />
-            <PopoverPopupState />
             <FormControlLabel
               control={
                 <SwitchUI checked={isDark} onChange={handleThemeChange} />
@@ -113,6 +112,17 @@ export default function App() {
                 <ListItemText primary={text} />
               </ListItem>
             ))}
+          </List>
+          <Divider />
+          <List>
+            <ListItem primary>
+              {" "}
+              <CustomizedDialogs />
+              <Divider />
+              <PopoverPopupState />
+              <Divider />
+              <ToogleButtons />
+            </ListItem>
           </List>
         </div>
       </Drawer>
