@@ -7,16 +7,19 @@
     "@emotion/styled": "^11.3.0",
     "@material-ui/core": "latest",
     "@material-ui/icons": "^5.0.0-beta.5",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "@material-ui/styles": "^5.0.0-beta.5",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "@mui/material": "^5.0.2",
+    "@mui/styles": "^5.0.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.2.1",
     "clsx": "latest",
     "material-ui-popup-state": "^1.9.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^1.1.5"
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^18.1.0"
+    "eslint-config-airbnb": "^18.2.1"
   }
 }
