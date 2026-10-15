@@ -28,7 +28,7 @@ module.exports = {
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
     "no-unused-vars": process.env.NODE_ENV === "production" ? "error" : "warn",
-    "linebreak-style": ["error", "windows"], // changes the file to CRLF
+    "linebreak-style": ["error", "unix"],
 
     // indent: ['warn', 2, { ignoredNodes: ['TemplateLiteral'] }],
     // 'template-curly-spacing': 'off',
