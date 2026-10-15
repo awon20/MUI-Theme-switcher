@@ -1,9 +1,9 @@
-import React from "react";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
-import Button from "@material-ui/core/Button";
-import Popover from "@material-ui/core/Popover";
-import PopupState, { bindTrigger, bindPopover } from "material-ui-popup-state";
+import React from 'react'
+import Typography from '@material-ui/core/Typography'
+import Box from '@material-ui/core/Box'
+import Button from '@material-ui/core/Button'
+import Popover from '@material-ui/core/Popover'
+import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state'
 
 export default function PopoverPopupState() {
   return (
@@ -13,19 +13,23 @@ export default function PopoverPopupState() {
           <Button
             variant="contained"
             color="primary"
+            // The binding supplies event handlers and matching ARIA attributes.
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...bindTrigger(popupState)}
           >
             Open Popover
           </Button>
           <Popover
+            // Keep state and accessibility bindings together.
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...bindPopover(popupState)}
             anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "center",
+              vertical: 'bottom',
+              horizontal: 'center',
             }}
             transformOrigin={{
-              vertical: "top",
-              horizontal: "center",
+              vertical: 'top',
+              horizontal: 'center',
             }}
           >
             <Box p={2}>
@@ -35,5 +39,5 @@ export default function PopoverPopupState() {
         </div>
       )}
     </PopupState>
-  );
+  )
 }

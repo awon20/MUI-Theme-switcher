@@ -1,30 +1,30 @@
-import React, { useContext } from "react";
-import makeStyles from "@material-ui/styles/makeStyles";
-import Drawer from "@material-ui/core/Drawer";
-import AppBar from "@material-ui/core/AppBar";
+import React, { useContext } from 'react'
+import makeStyles from '@material-ui/styles/makeStyles'
+import Drawer from '@material-ui/core/Drawer'
+import AppBar from '@material-ui/core/AppBar'
 // import CssBaseline from "@material-ui/core/CssBaseline";
-import Toolbar from "@material-ui/core/Toolbar";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import SwitchUI from "@material-ui/core/Switch";
-import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
-import Box from "@material-ui/core/Box";
-import { CustomThemeContext } from "./themes/CustomThemeProvider";
-import PopoverPopupState from "./components/PopoverPopupState";
-import CustomizedDialogs from "./components/CustomizedDialogs";
-import ToogleButtons from "./components/ToogleButton";
+import Toolbar from '@material-ui/core/Toolbar'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import SwitchUI from '@material-ui/core/Switch'
+import List from '@material-ui/core/List'
+import Typography from '@material-ui/core/Typography'
+import Divider from '@material-ui/core/Divider'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
+import InboxIcon from '@material-ui/icons/MoveToInbox'
+import MailIcon from '@material-ui/icons/Mail'
+import Box from '@material-ui/core/Box'
+import { CustomThemeContext } from './themes/CustomThemeProvider'
+import PopoverPopupState from './components/PopoverPopupState'
+import CustomizedDialogs from './components/CustomizedDialogs'
+import ToogleButtons from './components/ToogleButton'
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    display: "flex",
+    display: 'flex',
   },
   appBar: {
     zIndex: drawerWidth,
@@ -40,31 +40,31 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
   },
   drawerContainer: {
-    overflow: "auto",
+    overflow: 'auto',
   },
   content: {
     flexGrow: 1,
-    paddingTop: "30px",
-    paddingBottom: "30px",
-    paddingLeft: "30px",
-    paddingRight: "30px",
+    paddingTop: '30px',
+    paddingBottom: '30px',
+    paddingLeft: '30px',
+    paddingRight: '30px',
     // padding: theme.spacing(3),
   },
-}));
+}))
 
 export default function App() {
-  const classes = useStyles();
-  const { currentTheme, setTheme } = useContext(CustomThemeContext);
-  const isDark = Boolean(currentTheme === "dark");
+  const classes = useStyles()
+  const { currentTheme, setTheme } = useContext(CustomThemeContext)
+  const isDark = Boolean(currentTheme === 'dark')
 
   const handleThemeChange = (event) => {
-    const { checked } = event.target;
+    const { checked } = event.target
     if (checked) {
-      setTheme("dark");
+      setTheme('dark')
     } else {
-      setTheme("normal");
+      setTheme('normal')
     }
-  };
+  }
 
   return (
     <div className={classes.root}>
@@ -93,7 +93,7 @@ export default function App() {
         <Toolbar />
         <div className={classes.drawerContainer}>
           <List>
-            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -104,7 +104,7 @@ export default function App() {
           </List>
           <Divider />
           <List>
-            {["All mail", "Trash", "Spam"].map((text, index) => (
+            {['All mail', 'Trash', 'Spam'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -116,7 +116,7 @@ export default function App() {
           <Divider />
           <List>
             <ListItem primary>
-              {" "}
+              {' '}
               <CustomizedDialogs />
               <Divider />
               <PopoverPopupState />
@@ -159,5 +159,5 @@ export default function App() {
         </Typography>
       </main>
     </div>
-  );
+  )
 }
