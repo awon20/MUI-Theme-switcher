@@ -1,3 +1,63 @@
+# Material UI Theme Switcher
+
+React-Demo zum Umschalten zwischen einem normalen und einem dunklen Material-UI-Theme.
+
+## Umfang
+
+- Gemeinsamer Theme-Zustand über React Context
+- Zentrale Theme-Definitionen
+- Beispiele für Dialoge, Popover und Umschalter
+
+## Wartungsstand
+
+Die Sicherheits- und Abhängigkeitsänderungen werden in [PR #1](https://github.com/awon20/MUI-Theme-switcher/pull/1) verfolgt. Sie sind noch nicht in den Quellcode-Hauptbranch übernommen. Die README-Ergänzung führt diesen Pull Request nicht zusammen.
+
+## Lokal starten
+
+Die folgenden Befehle verwenden ausdrücklich den vorbereiteten Wartungsbranch. Dessen Änderungen sind noch in Prüfung; offene Paketwarnungen stehen im zugehörigen PR. Der bisherige Hauptbranch verwendet teilweise ältere Build-Werkzeuge und kann mit neueren Node-Versionen fehlschlagen.
+
+Voraussetzungen: Git, Node.js und npm. Die lokalen Web-Builds des Wartungsstands wurden mit Node.js 24.19.0 und npm 11.21.0 geprüft. Ein erfolgreicher Build bedeutet keine vollständige Behebung aller Paketwarnungen.
+
+```sh
+git clone --branch codex/security-maintenance-2026-10-13 https://github.com/awon20/MUI-Theme-switcher.git
+cd MUI-Theme-switcher
+npm ci --ignore-scripts
+npm start
+```
+
+Die vom Entwicklungsserver ausgegebene lokale Adresse öffnen. Zum Beenden im Terminal `Ctrl+C` drücken.
+
+## Build und Prüfungen
+
+```sh
+npm run build
+npm audit
+```
+
+Der statische Web-Build liegt in `build/`. `npm test` startet den konfigurierten Test-Runner; die Existenz des Skripts allein belegt keine vollständige Testabdeckung.
+
+`npm run lint` prüft die JavaScript-/JSX-Dateien mit ESLint.
+
+## Projektstruktur
+
+- [`src/App.js`](https://github.com/awon20/MUI-Theme-switcher/blob/main/src/App.js)
+- [`src/themes`](https://github.com/awon20/MUI-Theme-switcher/tree/main/src/themes)
+- [`src/components`](https://github.com/awon20/MUI-Theme-switcher/tree/main/src/components)
+- [`material-ui-theme-switcher.png`](https://github.com/awon20/MUI-Theme-switcher/blob/main/material-ui-theme-switcher.png)
+
+## Herkunft
+
+Basiert auf dem [Theme-Switcher-Beitrag von TechInscribed](https://techinscribed.com/building-react-app-using-material-ui-with-support-for-multiple-switchable-themes/) und dem [Beispiel von infonomic](https://github.com/infonomic/material-ui-theme-switcher). Die vorhandene Variante verwendet JavaScript und einen Context mit Theme-Wert und Setter.
+
+## Beiträge
+
+Änderungen mit einer kurzen Beschreibung und passenden Prüfergebnissen als Pull Request einreichen. Keine Zugangsdaten, privaten Schlüssel oder lokalen Abhängigkeitsordner hinzufügen.
+
+<details>
+<summary>Bisherige Projektnotizen (historischer Stand)</summary>
+
+Die folgenden Hinweise bleiben als ursprüngliche Dokumentation erhalten. Für den aktuellen Wartungsstand gelten die Angaben oben.
+
 # Material UI Theme Switcher Example
 
 A demonstration theme switcher using [Material UI](https://material-ui.com/).
@@ -79,3 +139,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+</details>
